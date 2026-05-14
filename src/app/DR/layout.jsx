@@ -135,7 +135,7 @@ const LogoutIcon = ({ className }) => (
 const drNavItems = [
   {
     label: "Dashboard",
-    href: "/dashboard",
+    href: "/DR",
     icon: HomeIcon,
   },
   {

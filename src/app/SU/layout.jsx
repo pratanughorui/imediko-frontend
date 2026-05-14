@@ -135,7 +135,7 @@ const LogoutIcon = ({ className }) => (
 const suNavItems = [
   {
     label: "Dashboard",
-    href: "/SU/dashboard",
+    href: "/SU",
     icon: HomeIcon,
   },
   {
