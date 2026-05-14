@@ -5,8 +5,12 @@
 */
 
 "use client";
+import { useState } from "react";
+import CreatePracticeModal from "./components/CreatePracticeModal";
 
 export default function PracticesPage() {
+  const [openModal, setOpenModal] = useState(false);
+
   const practices = [
     {
       id: 1,
@@ -49,7 +53,10 @@ export default function PracticesPage() {
           </p>
         </div>
 
-        <button className="flex items-center gap-2 bg-black text-white px-5 py-3 rounded-xl hover:bg-gray-800 transition">
+        <button
+          onClick={() => setOpenModal(true)}
+          className="flex items-center gap-2 bg-black text-white px-5 py-3 rounded-xl cursor-pointer hover:bg-gray-800 transition"
+        >
           {/* Plus SVG */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -68,6 +75,9 @@ export default function PracticesPage() {
           Add Practice
         </button>
       </div>
+
+      {/* Modal */}
+      <CreatePracticeModal openModal={openModal} setOpenModal={setOpenModal} />
 
       {/* Practice Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
